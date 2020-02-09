@@ -3,6 +3,8 @@ A personal configuration for vim using amix/vimrc and phpactor for php developme
 
 The configuration works on Linux with VIM 8.
 
+## Phactor
+
 ```
  
  git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -26,7 +28,13 @@ The configuration works on Linux with VIM 8.
  
 ```
 
-~/.vim_runtime/my_configs.vim
+## VIM language hightlight
+
+```
+git clone https://github.com/sheerun/vim-polyglot.git ~/.vim_runtime/my_plugins/vim-polyglot
+```
+
+## my_configs.vim
 
 ```
 
