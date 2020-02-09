@@ -74,4 +74,11 @@ The configuration works on Linux with VIM 8.
  " CLI fuzzy finder fzf | https://github.com/junegunn/fzf
  set rtp+=~/.fzf
  
+
+ " Ag search
+ if executable('ag')
+   map <leader>g :Ag 
+   let g:ackprg = 'ag --nogroup --nocolor --column'
+ endif
+
 ```
