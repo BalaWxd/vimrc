@@ -34,12 +34,12 @@ The configuration works on Linux with VIM 8.
 ## VIM language syntax check and fixes
 
 ```
-  # Load syntax, indent, ftplugin, many languages
+  " Load syntax, indent, ftplugin, many languages
   git clone https://github.com/sheerun/vim-polyglot.git ~/.vim_runtime/my_plugins/vim-polyglot
 ```
 
 ```
-  Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
+  " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
   git clone https://github.com/dense-analysis/ale.git ~/.vim_runtime/my_plugins/ale
 ```
 
