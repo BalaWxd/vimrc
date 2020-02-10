@@ -3,13 +3,16 @@ A personal configuration for vim using amix/vimrc and phpactor for php developme
 
 The configuration works on Linux with VIM 8.
 
-## Phactor
+## VIM runtime
 
 ```
- 
  git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
  sh ~/.vim_runtime/install_awesome_vimrc.sh
- 
+```
+
+## Phactor - PHP
+
+```
  # Plugins
  git clone https://github.com/ncm2/ncm2.git ~/.vim_runtime/my_plugins/ncm2
  git clone https://github.com/phpactor/ncm2-phpactor.git ~/.vim_runtime/my_plugins/ncm2-phpactor
@@ -28,10 +31,16 @@ The configuration works on Linux with VIM 8.
  
 ```
 
-## VIM language hightlight
+## VIM language syntax check and fixes
 
 ```
-git clone https://github.com/sheerun/vim-polyglot.git ~/.vim_runtime/my_plugins/vim-polyglot
+  # Load syntax, indent, ftplugin, many languages
+  git clone https://github.com/sheerun/vim-polyglot.git ~/.vim_runtime/my_plugins/vim-polyglot
+```
+
+```
+  Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
+  git clone https://github.com/dense-analysis/ale.git ~/.vim_runtime/my_plugins/ale
 ```
 
 ## my_configs.vim
