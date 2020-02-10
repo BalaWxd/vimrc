@@ -24,11 +24,6 @@ The configuration works on Linux with VIM 8.
  
  # Install neovim module
  python3 -m pip install neovim && python3 -m pip install pyvim
- 
- # Install fzf (Fuzzy finder)
- git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
- ~/.fzf/install
- 
 ```
 
 ## VIM language syntax check and fixes
@@ -42,6 +37,14 @@ The configuration works on Linux with VIM 8.
   " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
   git clone https://github.com/dense-analysis/ale.git ~/.vim_runtime/my_plugins/ale
 ```
+
+## Fuzzy finder
+
+```
+ # Install fzf (Fuzzy finder)
+ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+ ~/.fzf/install
+``` 
 
 ## my_configs.vim
 
@@ -89,7 +92,9 @@ The configuration works on Linux with VIM 8.
  set completeopt=noinsert,menuone,noselect
  
  " CLI fuzzy finder fzf | https://github.com/junegunn/fzf
- set rtp+=~/.fzf
+ if executable('fzf')
+   set rtp+=~/.fzf
+ endif
  
 
  " Ag search
