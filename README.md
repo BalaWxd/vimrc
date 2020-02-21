@@ -50,9 +50,7 @@ The configuration works on Linux with VIM 8.
 
 ```
 
- " ###################
  " Phpactor | https://phpactor.github.io/phpactor/vim-plugin.html
- " ###################
  
  " Include use statement
  nmap <Leader>u :call phpactor#UseAdd()<CR>
@@ -96,11 +94,18 @@ The configuration works on Linux with VIM 8.
    set rtp+=~/.fzf
  endif
  
+ " Custom tweaks
 
  " Ag search
  if executable('ag')
-   map <leader>g :Ag 
    let g:ackprg = 'ag --nogroup --nocolor --column'
  endif
+ 
+ " vim-commentary, change PHP code comment string
+ au Filetype php setlocal commentstring=//\ %s
+ 
+ " A fix for vue project indents
+ " As vim_runtime already includes othree/html5.vim, where defines html indents.
+ au BufRead,BufNewFile *.vue set filetype=html ts=2 sw=2 sts=2
 
 ```
